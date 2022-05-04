@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PoliceChief : MonoBehaviour
 {
     public GameObject PoliceChatBox; // the text on screen the police chief says
+    public string nextDialogue; // the dialogue for when we've collected all 3 clues
+    public Text chat;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,10 @@ public class PoliceChief : MonoBehaviour
         if (collision.gameObject.GetComponent<Player>()) // when the player collides with police
         {
             PoliceChatBox.SetActive(true); // show the police text
+            if(FindObjectOfType<CluesFound>().found == FindObjectOfType<CluesFound>().numberOfClues)
+            {
+                chat.text = nextDialogue; // make sure they say something else
+            }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
