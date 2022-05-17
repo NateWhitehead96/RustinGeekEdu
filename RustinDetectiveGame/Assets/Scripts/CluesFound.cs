@@ -8,6 +8,7 @@ public class CluesFound : MonoBehaviour
     public int found; // how many clues we have found
     public int numberOfClues; // how many clues are there to find
     public Text clueText; // so we can update our clues found text
+    public Text money;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,6 @@ public class CluesFound : MonoBehaviour
     void Update()
     {
         clueText.text = "Clues Found: " + found + " / " + numberOfClues; // this should print "Clues Found: 0 / 3"
+        money.text = "$ " + GameManager.instance.cash;
     }
 }
