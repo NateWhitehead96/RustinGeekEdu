@@ -16,7 +16,7 @@ public class LineupScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //HQButton.SetActive(false); // hide button
+        HQButton.SetActive(false); // hide button
         //selectedDisplay.gameObject.SetActive(false); // hide the text
     }
 
@@ -51,7 +51,8 @@ public class LineupScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         selectedDisplay.gameObject.SetActive(false);
-        LineupPanel.SetActive(false);
+        gameObject.SetActive(false);
+        //LineupPanel.SetActive(false);
         //FindObjectOfType<PoliceChief>().LineUp.SetActive(false);
     }
     public void ReturnToHQ()
