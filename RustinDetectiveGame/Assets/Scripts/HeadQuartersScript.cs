@@ -21,6 +21,10 @@ public class HeadQuartersScript : MonoBehaviour
         {
             cases[1].SetActive(true);
         }
+        if(GameManager.instance.casesClosed > 1)
+        {
+            cases[2].SetActive(true); // we've beaten the 2nd case, show case 3 button
+        }
     }
 
     // Update is called once per frame
