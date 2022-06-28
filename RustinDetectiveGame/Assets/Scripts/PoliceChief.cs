@@ -13,7 +13,7 @@ public class PoliceChief : MonoBehaviour
     void Start()
     {
         PoliceChatBox.SetActive(false); // make the text invisible from the start of the game
-        LineUp = FindObjectOfType<LineupScript>().gameObject; // make sure everyone has access to this object
+        //LineUp = FindObjectOfType<LineupScript>().gameObject; // make sure everyone has access to this object
         LineUp.SetActive(false); // hide on start
     }
 

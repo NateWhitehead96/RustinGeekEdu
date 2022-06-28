@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cash: 100
-  casesClosed: 0
+  casesClosed: 1
 --- !u!4 &2098497189
 Transform:
   m_ObjectHideFlags: 0
